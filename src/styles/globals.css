@@ -2,8 +2,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
+    /* margin: 0; */
+}
+body {
+    position: relative;
+    z-index: 1;
+    --tw-bg-opacity: 1;
+    background-color: #030014;
+    font-family: Plus Jakarta Sans, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    --tw-text-opacity: 1;
+    color: rgb(145 142 160 / var(--tw-text-opacity));
+}
+.hero-subtitle-gradient {
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, .05), hsla(0, 0%, 100%, 0));
+    transition: box-shadow .45s cubic-bezier(.6,.6,0,1);
+}
+.hero-subtitle-gradient:before {
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, .11), hsla(0, 0%, 100%, 0));
+}
 
+.hero-subtitle-text {
+    background: -webkit-linear-gradient(90deg, #e59cff .01%, #ba9cff 50.01%, #9cb2ff), -webkit-linear-gradient(0deg, hsla(0, 0%, 100%, .4), hsla(0, 0%, 100%, .4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
+.hero-circle-gradient:before, .hero-subtitle-gradient:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+}
+.hero-subtitle-gradient:before {
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, .11), hsla(0, 0%, 100%, 0));
+}
 .bg-dark {
     --tw-bg-opacity: 1;
     background-color: rgb(3 0 20 / var(--tw-bg-opacity));
