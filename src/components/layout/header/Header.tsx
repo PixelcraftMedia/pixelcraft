@@ -126,8 +126,8 @@ const Header: FC<HeaderProps> = ({ logo, ...props }) => {
 										handleScroll();
 									}}
 								>
-									<div className="flex">
-										<SwitchLogo className={scss.logo__img} logo={logo} /><h2>PIXELCRAFT</h2>
+									<div className="flex items-center ">
+										<SwitchLogo className={scss.logo__img} logo={logo} /><h2 className="ml-3 text-2xl font-bold shad">PIXELCRAFT</h2>
 									</div>
 								</ScrollLink>
 							</div>
