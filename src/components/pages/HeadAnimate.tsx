@@ -114,7 +114,7 @@ const HeadAnimate: FC<ServiceProps> = ({programaretitle, programaredescription})
               />
               <span className="hero-subtitle-text"> Get access </span>
             </span>
-        <h2 className="mb-4.5 text-2xl font-extrabold text-white sm:text-4xl xl:text-heading-2">Our Pricing Plan</h2>
+        <h2 className="mb-4.5 text-2xl font-extrabold text-white sm:text-4xl xl:text-heading-2">Servicii Pixelcraft Media Solutions IN ROMANIA</h2>
         <p className="mx-auto max-w-[714px] font-medium">Build SaaS AI applications using OpenAI and Next.js, this kit comes with pre-configured and pre-built examples, making it easier to quickly kickstart your AI startup.</p>
           </div>
       </div>

@@ -28,7 +28,7 @@ const HeadAnimate: FC<ServiceProps> = ({programaretitle, programaredescription})
         <span className="hero-subtitle-text">Main Features</span>
       </span>
       <h2 className="mb-4.5 text-2xl font-extrabold text-white sm:text-4xl xl:text-heading-2">
-        Key Features of AI Tool
+      Servicii Pixelcraft Media Solutions IN ROMANIA
       </h2>
       <p className="mx-auto max-w-[714px] font-medium">
         A Complete Solution for AI SaaS Startups
@@ -57,10 +57,11 @@ const HeadAnimate: FC<ServiceProps> = ({programaretitle, programaredescription})
               />
             </span>
             <h3 className="mb-4 text-lg font-semibold text-white">
-              OpenAI Integration
+            Dezvoltare Software
+            IT Solutions personalizate pentru afacerea ta
             </h3>
             <p className="font-medium">
-              Our AI writing tool analyzes your content, suggests improvements
+            CRM/ERP/EMR: Implementarea sistemelor de automatizare a proceselor de afaceri și integrarea cu platformele existente optimizează eficiența și reduce erorile, asigurând o operare mai fluidă.
             </p>
           </div>
         </div>
@@ -83,10 +84,11 @@ const HeadAnimate: FC<ServiceProps> = ({programaretitle, programaredescription})
  
             </span>
             <h3 className="mb-4 text-lg font-semibold text-white">
-              Next.js 13, React 18, TS
+            Aplicatii Mobile
+            Servicii IT pentru platforme mobile
             </h3>
             <p className="font-medium">
-              Say goodbye to embarrassing typos and grammar mistakes
+            Aplicatii Mobile: Dezvoltare de aplicatii cu design UI/UX pentru iOS si Android, integrate cu CRM-uri si alte sisteme.
             </p>
           </div>
         </div>
@@ -108,10 +110,11 @@ const HeadAnimate: FC<ServiceProps> = ({programaretitle, programaredescription})
               />
             </span>
             <h3 className="mb-4 text-lg font-semibold text-white">
-              Auth, DB, Sanity Blog
+            Site-uri Web
+            Diversitate de servicii IT pentru solutii web
             </h3>
             <p className="font-medium">
-              Originality is key, and our AI writing tool helps you maintain it
+            Site-uri Web: De la site-uri simple de prezentare la magazine online complexe si bloguri interactive, optimizate pentru performanta si SEO.
             </p>
           </div>
         </div>
@@ -133,10 +136,13 @@ const HeadAnimate: FC<ServiceProps> = ({programaretitle, programaredescription})
               />
             </span>
             <h3 className="mb-4 text-lg font-semibold text-white">
-              Cutting-edge Technologies
+            Design Creativ
+            Identitate vizuala unica pentru afacerea ta
             </h3>
             <p className="font-medium">
-              Transform your spoken words into written text easily & effortlessly
+            Web Design: Crearea de site-uri moderne si responsive.
+📢 Bannere si logo-uri: Design static si animat pentru campanii.
+📔 Cataloage: Prezentari si portofolii digitale si tiparite.
             </p>
           </div>
         </div>
@@ -158,10 +164,13 @@ const HeadAnimate: FC<ServiceProps> = ({programaretitle, programaredescription})
               />
             </span>
             <h3 className="mb-4 text-lg font-semibold text-white">
-              Pre-made AI Examples
+            Promovare si Marketing
+            IT Solutions pentru cresterea vizibilitatii si implicarii
             </h3>
             <p className="font-medium">
-              Whether you need a professional, or positive tone it has everyone
+            SEO: Optimizare pentru motoarele de cautare.
+📱 SMM: Strategii eficiente pe retelele sociale.
+🎯 Publicitate: Lansarea campaniilor de publicitate targetata.
             </p>
           </div>
         </div>
@@ -185,10 +194,11 @@ const HeadAnimate: FC<ServiceProps> = ({programaretitle, programaredescription})
              
             </span>
             <h3 className="mb-4 text-lg font-semibold text-white">
-              Rich Documentation
+            Securitate Cibernetica / Protejeaza-ti afacerea cu solutii avansate de securitate
             </h3>
             <p className="font-medium">
-              Need inspiration or assistance with generating content?
+             Protectia datelor: Solutii impotriva atacurilor cibernetice si criptare.
+             Audit de securitate: Teste de penetrare si verificari regulate.
             </p>
           </div>
         </div>

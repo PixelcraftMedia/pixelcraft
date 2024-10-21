@@ -63,11 +63,12 @@ const Home: FC<ServiceProps> = ({programaretitle, programaredescription}) => {
       </span>
 
       <h1 className="mb-6 text-3xl font-extrabold text-white sm:text-5xl xl:text-heading-1">
-        OpenAI + Next.js SaaS Boilerplate and Starter Kit
+      Pixelcraft
+      media solutions
       </h1>
 
       <p className="mx-auto mb-9 max-w-[500px] font-medium md:text-lg">
-        Ideal for developers looking to build SaaS applications using OpenAI and Next.js, this starter kit comes with pre-configured and pre-built examples, making it easier to quickly kickstart your AI startup.
+      Fie ca ai nevoie de un website modern, o aplicatie mobila sau o strategie de promovare online, suntem partenerul tau de incredere in domeniul IT.
       </p>
 
       <a
