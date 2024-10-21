@@ -64,7 +64,7 @@ const ContactPage: FC = () => {
                   <div className={scss.logo__bg}></div>
                 </div>
               </div>
-              <div className={scss.map} ref={mapRef}>
+      {/*       <div className={scss.map} ref={mapRef}>
                 {isMapLoaded ? (
                   <iframe
                     src="/map.html"
@@ -77,7 +77,7 @@ const ContactPage: FC = () => {
                 ) : (
                   <p>Карта загружается...</p>
                 )}
-              </div>
+              </div>*/}
             </div>
           </div>
         </div>
