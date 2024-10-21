@@ -127,3 +127,39 @@ body {
   .max-w-none {
     max-width: none;
 }
+
+
+
+/* features */
+
+.features-row-border {
+    background: linear-gradient(270deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .12) 49.48%, hsla(0, 0%, 100%, 0));
+}
+
+.rotate-90, .scale-100 {
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.rotate-90 {
+    --tw-rotate: 90deg;
+}
+.features-bg {
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .05));
+    transition: opacity .45s cubic-bezier(.6,.6,0,1);
+}
+.icon-border {
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, .029), hsla(0, 0%, 100%, .06) 50%, hsla(0, 0%, 100%, 0));
+}
+
+
+.icon-border:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, .06), hsla(0, 0%, 100%, .15) 50.52%, hsla(0, 0%, 100%, 0));
+}
