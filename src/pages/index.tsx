@@ -7,7 +7,8 @@ import Image from "next/image";
 // Динамическая загрузка компонентов
 const HomePage = dynamic(() => import('@/components/pages/HomePage'));
 const AboutPage = dynamic(() => import('@/components/pages/AboutPage'));
-const HeadAnimate = dynamic(() => import('@/components/pages/HeadAnimate'));
+const HeadAnimate = dynamic(() => import('@/components/pages/Features'));
+const Features = dynamic(() => import('@/components/pages/HeadAnimate'));
 const ContactPage = dynamic(() => import('@/components/pages/ContactPage'));
 
 interface Post {
@@ -67,17 +68,50 @@ const Index: FC<Props> = ({ posts }) => {
          
         
 
-         <HeadAnimate 
-              programaretitle={post.programaretitle} 
-              programaredescription={post.programaredescription}
-            />
 
 
 
-<section id="features" className="scroll-mt-17 overflow-hidden pt-17.5 lg:pt-22.5 xl:pt-27.5">
-  <div className="mx-auto max-w-[1222px] px-4 sm:px-8 xl:px-0">
-    <div className="wow fadeInUp relative z-10 mb-16 text-center">
-      <span className="hero-subtitle-gradient relative mb-4 inline-flex items-center gap-2 rounded-full px-4.5 py-2 text-sm font-medium">
+
+
+
+<section id="home" className="relative z-10 overflow-hidden pt-35 md:pt-40 xl:pt-45">
+  <div className="mx-auto max-w-7xl">
+    <div className="pointer-events-none absolute inset-0 -z-10 -mx-28 overflow-hidden">
+      <div className="-u-z-10 hero-circle-gradient absolute -top-[128%] left-1/2 -z-1 h-[1282px] w-full max-w-[1282px] -translate-x-1/2 rounded-full sm:-top-[107%] xl:-top-[73%]"></div>
+      <div className="-u-z-10 hero-circle-gradient absolute -top-[112%] left-1/2 -z-1 h-[1046px] w-full max-w-[1046px] -translate-x-1/2 rounded-full sm:-top-[93%] xl:-top-[62%]"></div>
+      <div className="-u-z-10 absolute left-1/2 top-0 aspect-[1204/394] w-full max-w-[1204px] -translate-x-1/2">
+       
+      <Image
+       className="max-w-none"
+         
+         width={760}
+         height={780}
+          data-nimg="fill"
+        style={{
+          
+    position: 'absolute',
+    height: '100%',
+    width: '100%',
+    left: 0,
+    top: 0,
+    right: 0,
+    bottom: 0,
+    color: 'transparent',
+  }}
+  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+  src="https://ai-tool.nextjstemplates.com/images/blur/blur-02.svg"
+  alt="blur"
+              />
+       
+      
+      </div>
+      <div className="-u-z-10 absolute left-1/2 top-0 h-full w-full -translate-x-1/2 bg-[url(https://ai-tool.nextjstemplates.com/images/blur/blur-01.svg)] bg-cover bg-top bg-no-repeat"></div>
+    </div>
+  </div>
+
+  <div className="relative z-1 mx-auto max-w-[900px] px-4 sm:px-8 xl:px-0">
+    <div className="text-center">
+      <span className="hero-subtitle-gradient hover:hero-subtitle-hover relative mb-5 inline-flex items-center gap-2 rounded-full px-4.5 py-2 text-sm font-medium">
       <Image
           className="max-w-none"
          priority={true}
@@ -92,177 +126,53 @@ const Index: FC<Props> = ({ posts }) => {
   src="https://ai-tool.nextjstemplates.com/images/hero/icon-title.svg"
   alt=""
               />
-        <span className="hero-subtitle-text">Main Features</span>
+        <span className="hero-subtitle-text">Launch Your AI Startup with</span>
       </span>
-      <h2 className="mb-4.5 text-2xl font-extrabold text-white sm:text-4xl xl:text-heading-2">
-        Key Features of AI Tool
-      </h2>
-      <p className="mx-auto max-w-[714px] font-medium">
-        A Complete Solution for AI SaaS Startups
+
+      <h1 className="mb-6 text-3xl font-extrabold text-white sm:text-5xl xl:text-heading-1">
+        OpenAI + Next.js SaaS Boilerplate and Starter Kit
+      </h1>
+
+      <p className="mx-auto mb-9 max-w-[500px] font-medium md:text-lg">
+        Ideal for developers looking to build SaaS applications using OpenAI and Next.js, this starter kit comes with pre-configured and pre-built examples, making it easier to quickly kickstart your AI startup.
       </p>
+
+      <a
+        className="hero-button-gradient inline-flex rounded-lg px-7 py-3 font-medium text-white duration-300 ease-in hover:opacity-80"
+        href="/ai-examples"
+      >
+        Try AI Examples
+      </a>
     </div>
+  </div>
 
-    <div className="relative">
-      <div className="features-row-border absolute left-1/2 top-1/2 hidden h-[1px] w-1/2 -translate-y-1/2 rotate-90 lg:left-1/4 lg:block lg:-translate-x-1/3"></div>
-      <div className="features-row-border absolute right-1/2 top-1/2 hidden h-[1px] w-1/2 -translate-y-1/2 rotate-90 lg:right-[8.3%] lg:block"></div>
-
-      <div className="flex flex-wrap justify-center">
-        {/* Feature 1 */}
-        <div className="w-full sm:w-1/2 lg:w-1/3">
-          <div className="group relative overflow-hidden px-4 py-8 text-center sm:py-10 lg:px-8 xl:px-13 xl:py-15">
-            <span className="features-bg absolute left-0 top-0 -z-1 h-full w-full opacity-0 group-hover:opacity-100"></span>
-            <span className="icon-border relative mx-auto mb-8 inline-flex h-20 w-full max-w-[80px] items-center justify-center rounded-full">
-            <Image
-        className="max-w-none"
-         priority={true}
-         width={32}
-         height={32}
-         style={{ color: "transparent" }}
-  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-  src="https://ai-tool.nextjstemplates.com/images/features/icon-01.svg"
-  alt="Profesor Doctor Radulescu Luminita - Specialist Otorinolaringolog (ORL)"
-              />
-            </span>
-            <h3 className="mb-4 text-lg font-semibold text-white">
-              OpenAI Integration
-            </h3>
-            <p className="font-medium">
-              Our AI writing tool analyzes your content, suggests improvements
-            </p>
-          </div>
-        </div>
-
-        {/* Feature 2 */}
-        <div className="w-full sm:w-1/2 lg:w-1/3">
-          <div className="group relative overflow-hidden px-4 py-8 text-center sm:py-10 lg:px-8 xl:px-13 xl:py-15">
-            <span className="features-bg absolute left-0 top-0 -z-1 h-full w-full opacity-0 group-hover:opacity-100"></span>
-            <span className="icon-border relative mx-auto mb-8 inline-flex h-20 w-full max-w-[80px] items-center justify-center rounded-full">
-            <Image
-        className="max-w-none"
-         priority={true}
-         width={32}
-         height={32}
-         style={{ color: "transparent" }}
-  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-  src="https://ai-tool.nextjstemplates.com/images/features/icon-01.svg"
-  alt="Profesor Doctor Radulescu Luminita - Specialist Otorinolaringolog (ORL)"
-              />
+  <div className="relative mx-auto mt-17 aspect-[1170/411] w-full max-w-[1170px]" data-wow-delay="0.1s">
  
-            </span>
-            <h3 className="mb-4 text-lg font-semibold text-white">
-              Next.js 13, React 18, TS
-            </h3>
-            <p className="font-medium">
-              Say goodbye to embarrassing typos and grammar mistakes
-            </p>
-          </div>
-        </div>
 
-        {/* Feature 3 */}
-        <div className="w-full sm:w-1/2 lg:w-1/3">
-          <div className="group relative overflow-hidden px-4 py-8 text-center sm:py-10 lg:px-8 xl:px-13 xl:py-15">
-            <span className="features-bg absolute left-0 top-0 -z-1 h-full w-full opacity-0 group-hover:opacity-100"></span>
-            <span className="icon-border relative mx-auto mb-8 inline-flex h-20 w-full max-w-[80px] items-center justify-center rounded-full">
-            <Image
-        className="max-w-none"
+
+<Image
+       className="max-w-none"
          priority={true}
-         width={32}
-         height={32}
-         style={{ color: "transparent" }}
+         width={460}
+         height={780}
+        style={{
+          
+    position: 'absolute',
+    height: '100%',
+    width: '100%',
+    left: 0,
+    top: 0,
+    right: 0,
+    bottom: 0,
+    color: 'transparent',
+  }}
   sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-  src="https://ai-tool.nextjstemplates.com/images/features/icon-01.svg"
-  alt="Profesor Doctor Radulescu Luminita - Specialist Otorinolaringolog (ORL)"
-              />
-            </span>
-            <h3 className="mb-4 text-lg font-semibold text-white">
-              Auth, DB, Sanity Blog
-            </h3>
-            <p className="font-medium">
-              Originality is key, and our AI writing tool helps you maintain it
-            </p>
-          </div>
-        </div>
+  src="https://ai-tool.nextjstemplates.com/images/hero/hero.svg"
+  alt="hero"
 
-        {/* Feature 4 */}
-        <div className="w-full sm:w-1/2 lg:w-1/3">
-          <div className="group relative overflow-hidden px-4 py-8 text-center sm:py-10 lg:px-8 xl:px-13 xl:py-15">
-            <span className="features-bg absolute left-0 top-0 -z-1 h-full w-full opacity-0 group-hover:opacity-100 rotate-180"></span>
-            <span className="icon-border relative mx-auto mb-8 inline-flex h-20 w-full max-w-[80px] items-center justify-center rounded-full">
-            <Image
-        className="max-w-none"
-         priority={true}
-         width={32}
-         height={32}
-         style={{ color: "transparent" }}
-  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-  src="https://ai-tool.nextjstemplates.com/images/features/icon-01.svg"
-  alt="Profesor Doctor Radulescu Luminita - Specialist Otorinolaringolog (ORL)"
+  decoding="async"
+  data-nimg="fill"
               />
-            </span>
-            <h3 className="mb-4 text-lg font-semibold text-white">
-              Cutting-edge Technologies
-            </h3>
-            <p className="font-medium">
-              Transform your spoken words into written text easily & effortlessly
-            </p>
-          </div>
-        </div>
-
-        {/* Feature 5 */}
-        <div className="w-full sm:w-1/2 lg:w-1/3">
-          <div className="group relative overflow-hidden px-4 py-8 text-center sm:py-10 lg:px-8 xl:px-13 xl:py-15">
-            <span className="features-bg absolute left-0 top-0 -z-1 h-full w-full opacity-0 group-hover:opacity-100 rotate-180"></span>
-            <span className="icon-border relative mx-auto mb-8 inline-flex h-20 w-full max-w-[80px] items-center justify-center rounded-full">
-            <Image
-        className="max-w-none"
-         priority={true}
-         width={32}
-         height={32}
-         style={{ color: "transparent" }}
-  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-  src="https://ai-tool.nextjstemplates.com/images/features/icon-01.svg"
-  alt="Profesor Doctor Radulescu Luminita - Specialist Otorinolaringolog (ORL)"
-              />
-            </span>
-            <h3 className="mb-4 text-lg font-semibold text-white">
-              Pre-made AI Examples
-            </h3>
-            <p className="font-medium">
-              Whether you need a professional, or positive tone it has everyone
-            </p>
-          </div>
-        </div>
-
-        {/* Feature 6 */}
-        <div className="w-full sm:w-1/2 lg:w-1/3">
-          <div className="group relative overflow-hidden px-4 py-8 text-center sm:py-10 lg:px-8 xl:px-13 xl:py-15">
-            <span className="features-bg absolute left-0 top-0 -z-1 h-full w-full opacity-0 group-hover:opacity-100 rotate-180"></span>
-            <span className="icon-border relative mx-auto mb-8 inline-flex h-20 w-full max-w-[80px] items-center justify-center rounded-full">
-            <Image
-        className="max-w-none"
-         priority={true}
-         width={32}
-         height={32}
-         style={{ color: "transparent" }}
-  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-  src="https://ai-tool.nextjstemplates.com/images/features/icon-01.svg"
-  alt="Profesor Doctor Radulescu Luminita - Specialist Otorinolaringolog (ORL)"
-              />
-              
-             
-            </span>
-            <h3 className="mb-4 text-lg font-semibold text-white">
-              Rich Documentation
-            </h3>
-            <p className="font-medium">
-              Need inspiration or assistance with generating content?
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="features-row-border h-[1px] w-full"></div>
-    </div>
   </div>
 </section>
 
@@ -270,11 +180,16 @@ const Index: FC<Props> = ({ posts }) => {
 
 
 
+<Features
+              programaretitle={post.programaretitle} 
+              programaredescription={post.programaredescription}
+            />
 
-
-
-
-
+<HeadAnimate 
+              programaretitle={post.programaretitle} 
+              programaredescription={post.programaredescription}
+            />
+        
 
 
             

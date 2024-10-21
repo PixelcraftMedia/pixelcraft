@@ -163,3 +163,11 @@ body {
     z-index: -1;
     background: linear-gradient(180deg, hsla(0, 0%, 100%, .06), hsla(0, 0%, 100%, .15) 50.52%, hsla(0, 0%, 100%, 0));
 }
+.hero-circle-gradient:before {
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .08));
+}
+
+
+.-translate-x-1\/2 {
+    --tw-translate-x: -50%;
+}

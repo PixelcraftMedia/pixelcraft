@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
 	return (
 		// @ts-ignore
 		<IntlProvider locale={locale} messages={messages[locale]}>
-			<div className="bg-black">sdfggsdfgsd</div>
+			
 			<ThemeProvider>
 				<Component {...pageProps} dir={getDirection(locale)} />
 			</ThemeProvider>
