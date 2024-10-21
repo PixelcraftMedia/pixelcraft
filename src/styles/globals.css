@@ -197,8 +197,8 @@ body {
 /* Контейнер для сетки */
 .logo-grid {
     display: grid;
-    grid-template-columns: repeat(5, 5px); /* 5 колонок по 5px */
-    grid-template-rows: repeat(5, 5px);    /* 5 строк по 5px */
+    grid-template-columns: repeat(5, 2px); /* 5 колонок по 5px */
+    grid-template-rows: repeat(5, 2px);    /* 5 строк по 5px */
     gap: 5px;
     justify-content: center;
     align-items: center;
@@ -208,8 +208,8 @@ body {
   
   /* Стили для каждого квадрата */
   .grid-item {
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
     background-color: #7c5db3; /* Цвет квадрата */
     opacity: 0;
     animation: fadeIn 4s ease forwards, changeColor 4s infinite; /* Анимация появления и смены цвета */
