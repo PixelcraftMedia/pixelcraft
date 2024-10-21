@@ -1,7 +1,7 @@
 import "@/pages/globals.scss";
 import "@/pages/theme.scss";
 import type { AppProps } from "next/app";
-
+import '../styles/globals.css'
 import { useRouter } from "next/router";
 import { IntlProvider } from "react-intl";
 import { ThemeProvider } from "next-themes";
@@ -26,6 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
 	return (
 		// @ts-ignore
 		<IntlProvider locale={locale} messages={messages[locale]}>
+			<div className="bg-black">sdfggsdfgsd</div>
 			<ThemeProvider>
 				<Component {...pageProps} dir={getDirection(locale)} />
 			</ThemeProvider>

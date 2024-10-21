@@ -89,7 +89,7 @@ const Layout: FC<LayoutProps> = ({ children, dir, metatitle, metadescription, lo
 					<header>
 						<Header {...props}logo={logo} />
 					</header>
-					<main>{children}</main>
+					{children}
 					<footer>
 						<Footer {...props} logo={logo}/>
 					</footer>
