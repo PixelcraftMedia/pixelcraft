@@ -17,13 +17,34 @@ const SwitchLogo: FC<SwitchLogoProps> = ({ className , logo}) => {
 
 	return (
 		<>
-			<Image className={className} src={logo} alt="logo"  width={400}
-				  height={720}
-				  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-				  
-				  
-				  
-				  />
+			  <div className="logo-grid">
+ 
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+ <div className="grid-item"></div>
+</div>       
 		</>
 	);
 };

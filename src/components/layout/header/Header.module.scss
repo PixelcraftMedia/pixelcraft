@@ -14,7 +14,7 @@
 	}
 
 	.headerScroll.active {
-		padding: 15px 0;
+		padding: 30px 0;
 
 		backdrop-filter: blur(4px);
 		-webkit-backdrop-filter: blur(4px);
@@ -24,16 +24,14 @@
 
 		.logo {
 			a {
-				$logo-size: 140px;
+				$logo-size: 60px;
 				$logo-size2: 140px;
 				.logo__bg {
-					width: $logo-size2;
-					height: $logo-size;
+					
 				}
 
 				.logo__img {
-					width: $logo-size2;
-					height: $logo-size;
+					
 				}
 			}
 		}
@@ -84,8 +82,7 @@
 				
 				border-radius: 50%;
 
-				width: $logo-size2;
-				height: $logo-size;
+				
 
 				transition: 0.4s;
 			}
