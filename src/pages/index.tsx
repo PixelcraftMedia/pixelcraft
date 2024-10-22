@@ -64,7 +64,7 @@ const Index: FC<Props> = ({ posts }) => {
 
   return (
     <>
-      {/* Добавляем переключение языков */}
+      {/* Добавляем переключение языков 
       <div>
       <Link href="/" locale="en-US" style={{ marginRight: '10px' }}>
     English
@@ -73,15 +73,21 @@ const Index: FC<Props> = ({ posts }) => {
     Română
   </Link>
       </div>
-
+*/}
       {filteredPosts.length > 0 ? (
         filteredPosts.map((post: Post) => (
           <Layout key={post.slug} metatitle={post.metatitle} metadescription={post.metadescription} logo={post.logo.url}>
-            <div>{post.metatitle}</div>
+           
+         
             <Home
               programaretitle={post.programaretitle}
               programaredescription={post.programaredescription}
             />
+          
+             
+           
+         
+        
             <Features
               programaretitle={post.programaretitle}
               programaredescription={post.programaredescription}
@@ -90,7 +96,11 @@ const Index: FC<Props> = ({ posts }) => {
               programaretitle={post.programaretitle}
               programaredescription={post.programaredescription}
             />
+
+
+
           </Layout>
+          
         ))
       ) : (
         <p>No posts found with the specified tag.</p>
@@ -100,3 +110,12 @@ const Index: FC<Props> = ({ posts }) => {
 };
 
 export default Index;
+  /*  
+  
+  slag to posts and can use to pages
+  
+  <Link href={`/posts/${post.slug}`} passHref>  
+           
+    <h2>{post.title}dddd</h2>
+     </Link>
+  */

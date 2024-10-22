@@ -196,6 +196,7 @@ body {
 
 /* Контейнер для сетки */
 .logo-grid {
+    margin: 0;
     display: grid;
     grid-template-columns: repeat(5, 2px); /* 5 колонок по 5px */
     grid-template-rows: repeat(5, 2px);    /* 5 строк по 5px */
@@ -341,4 +342,19 @@ body {
     mask-composite: exclude;
     z-index: -1;
     background-image: linear-gradient(90deg, #e59cff .01%, #ba9cff 50.01%, #9cb2ff);
+}
+
+
+
+
+
+
+
+ /* footer */
+
+.footer-bg-gradient {
+    background: linear-gradient(0deg, hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, 0));
+}
+.footer-divider-gradient {
+    background: linear-gradient(270deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .12) 49.48%, hsla(0, 0%, 100%, 0));
 }
