@@ -3,14 +3,14 @@ import dynamic from 'next/dynamic';
 import Layout from "@/components/layout/Layout";
 import { getAllPosts } from "../../lib/api";
 import { GetStaticProps } from 'next';
-import Image from "next/image";
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+
 // Динамическая загрузка компонентов
 const HomePage = dynamic(() => import('@/components/pages/HomePage'));
-const AboutPage = dynamic(() => import('@/components/pages/AboutPage'));
-const HeadAnimate = dynamic(() => import('@/components/pages/Features'));
-const Features = dynamic(() => import('@/components/pages/HeadAnimate'));
+const Features = dynamic(() => import('@/components/pages/Features'));
+const HeadAnimate = dynamic(() => import('@/components/pages/HeadAnimate'));
 const Home = dynamic(() => import('@/components/pages/Home'));
-const ContactPage = dynamic(() => import('@/components/pages/ContactPage'));
 
 interface Post {
   programaredescription: string;
@@ -38,8 +38,9 @@ interface Props {
   posts: Post[];
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const posts = await getAllPosts(true);
+// Вставляем функцию getStaticProps для получения данных с Contentful
+export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => {
+  const posts = await getAllPosts(true, locale || 'en-US'); // Передаём локаль в запрос
   return {
     props: {
       posts,
@@ -56,50 +57,39 @@ const filterPostsByTag = (posts: Post[], tagName: string): Post[] => {
 };
 
 const Index: FC<Props> = ({ posts }) => {
-  
-  const heroPost = posts[0];
+  const { locale } = useRouter(); // Получаем текущую локаль
 
-  // Пример фильтрации постов по тегу "homepage"
+  // Фильтрация постов по тегу "homepage"
   const filteredPosts = filterPostsByTag(posts, "homepage");
 
   return (
     <>
+      {/* Добавляем переключение языков */}
+      <div>
+      <Link href="/" locale="en-US" style={{ marginRight: '10px' }}>
+    English
+  </Link>
+  <Link href="/" locale="ro-RO">
+    Română
+  </Link>
+      </div>
+
       {filteredPosts.length > 0 ? (
         filteredPosts.map((post: Post) => (
           <Layout key={post.slug} metatitle={post.metatitle} metadescription={post.metadescription} logo={post.logo.url}>
-         
-        
-
-
-
-
-
-
-
-
-
-
-         <Home
-              programaretitle={post.programaretitle} 
+            <div>{post.metatitle}</div>
+            <Home
+              programaretitle={post.programaretitle}
               programaredescription={post.programaredescription}
             />
-
-
-<Features
-              programaretitle={post.programaretitle} 
+            <Features
+              programaretitle={post.programaretitle}
               programaredescription={post.programaredescription}
             />
-
-<HeadAnimate 
-              programaretitle={post.programaretitle} 
+            <HeadAnimate
+              programaretitle={post.programaretitle}
               programaredescription={post.programaredescription}
             />
-        
-
-
-      
-          
-         
           </Layout>
         ))
       ) : (

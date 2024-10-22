@@ -18,9 +18,18 @@ module.exports = {
          '4.5': '1.125rem',
          '35': '8.75rem',
          '17': '4.25rem',
+         '12.5': '3.125rem', // Добавляем класс для padding-top
+        
+      },
+      fontSize: {
+        'heading-1': ['60px', { lineHeight: '72px' }],
+        'heading-2': ['48px', { lineHeight: '58px' }],
       },
       zIndex: {
         '-1': '-1', // Добавляем кастомное значение для z-index
+      },
+      margin: {
+        '5.5': '1.375rem', // Добавляем класс для отступа mb-5.5
       },
     },
   },

@@ -20,9 +20,9 @@ const nextConfig = {
 			},
 		],
 	},
-	i18n: {
-		locales: ["ro"], // оставляем только один язык
-		defaultLocale: "ro", // назначаем его как основной
+	i18n: { 
+		locales: ['en-US', 'ro-RO'], // Языки, которые вы поддерживаете
+		defaultLocale: 'ro-RO', // Язык по умолчанию
 		localeDetection: false // при необходимости
 	},
 
