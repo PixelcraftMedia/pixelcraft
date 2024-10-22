@@ -1,15 +1,14 @@
 const POST_GRAPHQL_FIELDS = `
-  programaredescription
-  programaretitle
+ 
+  homeimage{
+ 
+    url
+    title
+  }
   metatitle
   metadescription
   h1
-  leftimg {
-    url
-  }
-  rightimg {
-    url
-  }
+  
   logo {
     url
   }
@@ -18,8 +17,8 @@ const POST_GRAPHQL_FIELDS = `
   }
   slug
   title
-  videoId
-  youtubedescription
+ 
+ 
   coverImage {
     url
   }

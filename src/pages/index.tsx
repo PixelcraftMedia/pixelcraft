@@ -13,24 +13,18 @@ const HeadAnimate = dynamic(() => import('@/components/pages/HeadAnimate'));
 const Home = dynamic(() => import('@/components/pages/Home'));
 
 interface Post {
-  programaredescription: string;
-  programaretitle: string;
+  
+  homeimage: {
+    url: string;
+   
+  }
   metadescription: string;
   metatitle: string;
-  logo: {
-    url: string;
-  };
-  rightimg: {
-    url: string;
-  };
-  h1: string;
-  videoId: string;
+ 
+  
   slug: string;
-  title: string;
-  youtubedescription: string;
-  coverImage: {
-    url: string;
-  };
+
+  
   tags: { [key: string]: string };
 }
 
@@ -64,7 +58,7 @@ const Index: FC<Props> = ({ posts }) => {
 
   return (
     <>
-      {/* Добавляем переключение языков 
+      
       <div>
       <Link href="/" locale="en-US" style={{ marginRight: '10px' }}>
     English
@@ -73,16 +67,16 @@ const Index: FC<Props> = ({ posts }) => {
     Română
   </Link>
       </div>
-*/}
+
       {filteredPosts.length > 0 ? (
         filteredPosts.map((post: Post) => (
-          <Layout key={post.slug} metatitle={post.metatitle} metadescription={post.metadescription} logo={post.logo.url}>
+          <Layout key={post.slug} metatitle={post.metatitle} metadescription={post.metadescription} logo={post.slug}>
            
-         
+       
             <Home
-             rightimg={post.slug}
-              programaretitle={post.programaretitle}
-              programaredescription={post.programaredescription}
+            
+            homeimage={post.homeimage.url}
+           post={post.slug}
             />
           
              
@@ -90,10 +84,14 @@ const Index: FC<Props> = ({ posts }) => {
          
         
             <Features
-              programaretitle={post.programaretitle}
-              programaredescription={post.programaredescription}
+              programaretitle={post.slug}
+              programaredescription={post.slug}
             />
-          
+            <HeadAnimate
+              programaretitle={post.slug}
+              programaredescription={post.slug}
+            />
+
 
 
 

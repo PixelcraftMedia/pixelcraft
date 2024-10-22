@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 import Image from "next/image";
 interface ServiceProps {
-	programaretitle: string;
-	programaredescription:string;
-  rightimg: string;
+  
+  post:string;
+  homeimage:string;
 }
-const Home: FC<ServiceProps> = ({programaretitle, programaredescription}) => {
+const Home: FC<ServiceProps> = ({post ,  homeimage}) => {
 	return (
 		<>
 		<section id="home" className="relative z-10 overflow-hidden pt-35 md:pt-40 xl:pt-45">
@@ -63,7 +63,7 @@ const Home: FC<ServiceProps> = ({programaretitle, programaredescription}) => {
           src="https://ai-tool.nextjstemplates.com/images/hero/icon-title.svg"
           alt=""
         />
-        <span className="hero-subtitle-text">Launch Your AI Startup with</span>
+        <span className="hero-subtitle-text">{post}</span>
       </span>
 
       {/* Title */}
@@ -104,7 +104,8 @@ const Home: FC<ServiceProps> = ({programaretitle, programaredescription}) => {
         color: 'transparent',
       }}
       sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-      src="https://ai-tool.nextjstemplates.com/images/hero/hero.svg"
+     
+      src={ homeimage || 'https://ai-tool.nextjstemplates.com/images/hero/hero.svg'}
       alt="hero"
       decoding="async"
       data-nimg="fill"
