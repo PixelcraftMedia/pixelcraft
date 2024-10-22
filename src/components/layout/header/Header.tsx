@@ -157,45 +157,7 @@ const Header: FC<HeaderProps> = ({ logo, ...props }) => {
 
 								<div className={scss.right}>
 									
-								{/*	<div className={scss.dropdown__language__menu__for__desktop}>
-										<div className={scss.icon}>
-											<span>
-												<LangIcon
-													className={`${scss.arrow__icon} ${scss.arrow__icon__V1}`}
-												/>
-												<ArrowIcon
-													className={`${scss.arrow__icon} ${scss.arrow__icon__V2}`}
-												/>
-											</span>
-										</div>
- 
-										<div className={scss.dropdown__content}>
-											{[...locales].map((locale, index) => (
-												<Link
-													key={index + 1}
-													className={
-														locale === activeLocale
-															? `${scss.button} ${scss.active}`
-															: `${scss.button}`
-													}
-													href={pathname}
-													locale={locale}
-												>
-													{locale}
-												</Link>
-											))}
-										</div>
-									</div>! switch lang */}
-									{/* ! switch theme */}
-									{/*<div className={scss.switch__theme}>*/}
-									{/*	<SwitchThemeIcon*/}
-									{/*		className__Icons={scss.icons}*/}
-									{/*		className__SunIcon={scss.SunIcon}*/}
-									{/*		className__MoonIcon={scss.MoonIcon}*/}
-									{/*	/>*/}
-									{/*</div>*/}
-
-									{/* ! timetable */}
+								
 									<div className={scss.timetable}>
 										<div className={scss.icon__text}>
 											<TimeIcon />
@@ -203,12 +165,7 @@ const Header: FC<HeaderProps> = ({ logo, ...props }) => {
 												<FormattedMessage id="page.header.timetable" />
 											</p>
 										</div>
-									{/*	<div className={scss.icon__text}>
-											<a className={scss.tel} href="tel:+40724955956">
-												<PhoneIcon />
-												<p className={scss.text}>+40724955956</p>
-											</a>
-										</div>*/}
+									
 									</div>
 								</div>
 							</div>

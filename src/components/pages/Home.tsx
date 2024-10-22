@@ -3,6 +3,7 @@ import Image from "next/image";
 interface ServiceProps {
 	programaretitle: string;
 	programaredescription:string;
+  rightimg: string;
 }
 const Home: FC<ServiceProps> = ({programaretitle, programaredescription}) => {
 	return (
@@ -21,8 +22,8 @@ const Home: FC<ServiceProps> = ({programaretitle, programaredescription}) => {
       <div className="-u-z-10 absolute left-1/2 top-0 aspect-[1204/394] w-full max-w-[1204px] -translate-x-1/2">
         <Image
           className="max-w-none"
-          width={760}
-          height={780}
+          width={100}
+          height={100}
           data-nimg="fill"
           style={{
             position: 'absolute',
@@ -35,7 +36,9 @@ const Home: FC<ServiceProps> = ({programaretitle, programaredescription}) => {
             color: 'transparent',
           }}
           sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-          src="https://ai-tool.nextjstemplates.com/images/blur/blur-02.svg"
+         
+          src={''}
+
           alt="blur"
         />
       </div>

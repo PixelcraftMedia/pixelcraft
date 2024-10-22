@@ -87,11 +87,11 @@ const Layout: FC<LayoutProps> = ({ children, dir, metatitle, metadescription, lo
 			<div dir={dir}>
 				<div className={`${scss.layout} ${font.className}`}>
 					<header>
-						<Header {...props}logo={logo} />
+						<Header {...props} />
 					</header>
 					{children}
 					<footer>
-						<Footer {...props} logo={logo}/>
+						<Footer {...props} />
 					</footer>
 				</div>
 			</div>

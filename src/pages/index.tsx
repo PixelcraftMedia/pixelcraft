@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 // Динамическая загрузка компонентов
-const HomePage = dynamic(() => import('@/components/pages/HomePage'));
+
 const Features = dynamic(() => import('@/components/pages/Features'));
 const HeadAnimate = dynamic(() => import('@/components/pages/HeadAnimate'));
 const Home = dynamic(() => import('@/components/pages/Home'));
