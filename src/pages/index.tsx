@@ -80,6 +80,7 @@ const Index: FC<Props> = ({ posts }) => {
            
          
             <Home
+             rightimg={post.slug}
               programaretitle={post.programaretitle}
               programaredescription={post.programaredescription}
             />
