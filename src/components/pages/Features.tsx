@@ -72,11 +72,14 @@ const Features: FC<ServiceProps> = ({programaretitle, programaredescription}) =>
                 priority={true}
                 width={32}
                 height={32}
+                loading="eager"
                 style={{ color: "transparent" }}
                 sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
                 src="https://ai-tool.nextjstemplates.com/images/features/icon-02.svg"
                 alt="Aplicatii Mobile"
               />
+
+
             </span>
             <h3 className="mb-4 text-lg font-semibold text-white">
               Aplicatii Mobile
@@ -97,6 +100,7 @@ const Features: FC<ServiceProps> = ({programaretitle, programaredescription}) =>
                 priority={true}
                 width={32}
                 height={32}
+                 loading="eager"
                 style={{ color: "transparent" }}
                 sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
                 src="https://ai-tool.nextjstemplates.com/images/features/icon-03.svg"
@@ -122,6 +126,7 @@ const Features: FC<ServiceProps> = ({programaretitle, programaredescription}) =>
                 priority={true}
                 width={32}
                 height={32}
+                 loading="eager"
                 style={{ color: "transparent" }}
                 sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
                 src="https://ai-tool.nextjstemplates.com/images/features/icon-04.svg"
@@ -147,6 +152,7 @@ const Features: FC<ServiceProps> = ({programaretitle, programaredescription}) =>
                 priority={true}
                 width={32}
                 height={32}
+                 loading="eager"
                 style={{ color: "transparent" }}
                 sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
                 src="https://ai-tool.nextjstemplates.com/images/features/icon-05.svg"
@@ -168,6 +174,7 @@ const Features: FC<ServiceProps> = ({programaretitle, programaredescription}) =>
             <span className="features-bg absolute left-0 top-0 -z-1 h-full w-full opacity-0 group-hover:opacity-100 rotate-180"></span>
             <span className="icon-border relative mx-auto mb-8 inline-flex h-20 w-full max-w-[80px] items-center justify-center rounded-full">
               <Image
+               loading="eager"
                 className="max-w-none"
                 priority={true}
                 width={32}

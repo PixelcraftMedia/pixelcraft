@@ -93,10 +93,7 @@ const Index: FC<Props> = ({ posts }) => {
               programaretitle={post.programaretitle}
               programaredescription={post.programaredescription}
             />
-            <HeadAnimate
-              programaretitle={post.programaretitle}
-              programaredescription={post.programaredescription}
-            />
+          
 
 
 
