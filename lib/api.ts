@@ -1,5 +1,5 @@
 const POST_GRAPHQL_FIELDS = `
-  worktextCollection(limit: 2) {
+  worktextCollection(limit: 12) {
     items {
       worktext
       workdescription
