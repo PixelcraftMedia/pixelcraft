@@ -4,7 +4,7 @@ import scss from "./Layout.module.scss";
 import Header from "@/components/layout/header/Header";
 import Footer from "@/components/layout/footer/Footer";
 import { useIntl } from "react-intl";
-import logo from "@/assets/ortodont.webp";
+
 import woman from "@/assets/img/Prof-Dr-LuminitaRadulescu.png";
 // Inter
 import { Montserrat } from "next/font/google";
@@ -12,7 +12,7 @@ import { Montserrat } from "next/font/google";
 const font = Montserrat({ subsets: ["latin"] });
 
 interface LayoutProps {
-	logo: string;
+	
 	metadescription: string;
 	metatitle: string;
 	children: ReactNode;
@@ -28,7 +28,7 @@ export interface IsOpenProps {
 	setIsOpenDropdownLanguage: (param: boolean) => void;
 }
 
-const Layout: FC<LayoutProps> = ({ children, dir, metatitle, metadescription, logo}) => {
+const Layout: FC<LayoutProps> = ({ children, dir, metatitle, metadescription}) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isOpenDropdown, setIsOpenDropdown] = useState(false);
 	const [isOpenDropdownLanguage, setIsOpenDropdownLanguage] = useState(false);
@@ -72,7 +72,7 @@ const Layout: FC<LayoutProps> = ({ children, dir, metatitle, metadescription, lo
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content={metatitle} />
 
-<meta name="twitter:image" content={`https://cabinet-orl-iasi.ro${logo}`} />
+
 <meta name="twitter:image:alt" content={metatitle} />
 
 

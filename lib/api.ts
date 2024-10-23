@@ -1,5 +1,5 @@
 const POST_GRAPHQL_FIELDS = `
-  worktextCollection(limit: 6) {
+  worktextCollection(limit: 2) {
     items {
       worktext
       workdescription
@@ -27,20 +27,15 @@ const POST_GRAPHQL_FIELDS = `
   metadescription
   homebuttontext
   h1
-  logo {
-    url
-  }
+ 
   tags {
     homepage
   }
   slug
   title
-  coverImage {
-    url
-  }
+ 
   date
 `;
-
 // Функция для выполнения GraphQL-запроса с учётом локали
 async function fetchGraphQL(query: string, locale: string, preview = true): Promise<any> {
   try {
@@ -57,14 +52,17 @@ async function fetchGraphQL(query: string, locale: string, preview = true): Prom
           }`,
         },
         body: JSON.stringify({ query }),
+        next: { tags: ["posts"] },
       }
     );
-
-    // Проверка ответа
+    
     const data = await response.json();
+
     if (!response.ok || data.errors) {
       console.error("GraphQL error:", data.errors || response.statusText);
-      throw new Error(`Error fetching data: ${data.errors ? JSON.stringify(data.errors) : response.statusText}`);
+      throw new Error(
+        `Error fetching data: ${data.errors ? JSON.stringify(data.errors) : response.statusText}`
+      );
     }
 
     return data;

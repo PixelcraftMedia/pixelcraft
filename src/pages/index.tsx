@@ -92,7 +92,7 @@ const Index: FC<Props> = ({ posts }) => {
 
       {filteredPosts.length > 0 ? (
         filteredPosts.map((post: Post) => (
-          <Layout key={post.slug} metatitle={post.metatitle} metadescription={post.metadescription} logo={post.slug}>
+          <Layout key={post.slug} metatitle={post.metatitle} metadescription={post.metadescription}>
        
        
             <Home

@@ -58,7 +58,7 @@ const Header: FC<HeaderProps> = ({ logo, ...props }) => {
 
 	const links: linksProps[] = [
 		{
-			label: <FormattedMessage id="page.header.home" />,
+			label: "tuy",
 			to: "/",
 			spy: true,
 			smooth: true,
@@ -68,7 +68,7 @@ const Header: FC<HeaderProps> = ({ logo, ...props }) => {
 	
 	
 		{
-			label: <FormattedMessage id="page.header.service" />,
+			label: "tuy",
 			to: "service",
 			spy: true,
 			smooth: true,
@@ -76,7 +76,7 @@ const Header: FC<HeaderProps> = ({ logo, ...props }) => {
 			duration: durationScroll
 		},
 		{
-			label: <FormattedMessage id="page.header.about" />,
+			label: "tuy",
 			to: "about",
 			spy: true,
 			smooth: true,
@@ -84,7 +84,7 @@ const Header: FC<HeaderProps> = ({ logo, ...props }) => {
 			duration: durationScroll
 		},
 		{
-			label: <FormattedMessage id="page.header.contact" />,
+			label: "tuy",
 			to: "contact",
 			spy: true,
 			smooth: true,
@@ -162,7 +162,7 @@ const Header: FC<HeaderProps> = ({ logo, ...props }) => {
 										<div className={scss.icon__text}>
 											<TimeIcon />
 											<p className={scss.text}>
-												<FormattedMessage id="page.header.timetable" />
+													hfjhf
 											</p>
 										</div>
 									
@@ -268,7 +268,7 @@ switch lang */}
 									<div className={scss.icon__text}>
 										<TimeIcon />
 										<p className={scss.text}>
-											<FormattedMessage id="page.header.timetable" />
+											sdgffgsd
 										</p>
 									</div>
 									<div className={scss.icon__text}>
