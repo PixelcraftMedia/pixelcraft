@@ -6,21 +6,30 @@ import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
-// Динамическая загрузка компонентов
 
 const Features = dynamic(() => import('@/components/pages/Features'));
 const HeadAnimate = dynamic(() => import('@/components/pages/HeadAnimate'));
 const Home = dynamic(() => import('@/components/pages/Home'));
 
 interface Post {
-  
+  homedescription:string;
+  hometitle:string;
+  homebuttonstar: {
+    url:string;
+    title: string;
+  }
+  homedecoration: {
+    url:string;
+    title: string;
+  }
   homeimage: {
     url: string;
-   
+   title:string;
   }
   metadescription: string;
   metatitle: string;
- 
+  homebuttontext:string;
+
   
   slug: string;
 
@@ -34,7 +43,10 @@ interface Props {
 
 // Вставляем функцию getStaticProps для получения данных с Contentful
 export const getStaticProps: GetStaticProps<Props> = async ({ locale }) => {
+  console.log('Current locale:', locale);
+ 
   const posts = await getAllPosts(true, locale || 'en-US'); // Передаём локаль в запрос
+  console.log('Fetched posts:', posts);
   return {
     props: {
       posts,
@@ -71,14 +83,21 @@ const Index: FC<Props> = ({ posts }) => {
       {filteredPosts.length > 0 ? (
         filteredPosts.map((post: Post) => (
           <Layout key={post.slug} metatitle={post.metatitle} metadescription={post.metadescription} logo={post.slug}>
-           
+       
        
             <Home
-            
+            homebuttontext={post.homebuttontext}
+            homedecorationsalt={post.homedecoration.title}
+            homedecorationurl={post.homedecoration.url}
+            homebuttonstaralt={post.homebuttonstar.title}
+            homebuttonstarurl={post.homebuttonstar.url}
+            hometitle={post.hometitle}
+            homedescription={post.homedescription}
             homeimage={post.homeimage.url}
+            homeimagetitle={post.homeimage.title}
            post={post.slug}
             />
-          
+         
              
            
          
@@ -92,7 +111,10 @@ const Index: FC<Props> = ({ posts }) => {
               programaredescription={post.slug}
             />
 
-
+<Link href={`/posts/${post.slug}`} passHref>  
+           
+           <h2>{post.slug}dddd</h2>
+            </Link>
 
 
           </Layout>
@@ -110,8 +132,5 @@ export default Index;
   
   slag to posts and can use to pages
   
-  <Link href={`/posts/${post.slug}`} passHref>  
-           
-    <h2>{post.title}dddd</h2>
-     </Link>
+
   */

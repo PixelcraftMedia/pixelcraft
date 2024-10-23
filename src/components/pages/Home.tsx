@@ -2,10 +2,21 @@ import React, { FC } from "react";
 import Image from "next/image";
 interface ServiceProps {
   
-  post:string;
+  homebuttonstaralt:string;
+  homebuttonstarurl:string;
+  homedecorationsalt:string;
+  homedecorationurl:string;
+  hometitle:string;
+  homedescription:string;
+  homebuttontext:string;
+  
   homeimage:string;
+  homeimagetitle:string;
+
+  post:string;
 }
-const Home: FC<ServiceProps> = ({post ,  homeimage}) => {
+const Home: FC<ServiceProps> = ({post ,  homeimage,homeimagetitle,  homedescription,homedecorationsalt,
+  homedecorationurl,homebuttonstaralt, homebuttonstarurl,hometitle,homebuttontext}) => {
 	return (
 		<>
 		<section id="home" className="relative z-10 overflow-hidden pt-35 md:pt-40 xl:pt-45">
@@ -37,10 +48,11 @@ const Home: FC<ServiceProps> = ({post ,  homeimage}) => {
           }}
           sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
          
-          src={''}
+          src={homedecorationurl}
 
-          alt="blur"
+          alt={homedecorationsalt}
         />
+       
       </div>
       <div className="-u-z-10 absolute left-1/2 top-0 h-full w-full -translate-x-1/2 bg-[url(https://ai-tool.nextjstemplates.com/images/blur/blur-01.svg)] bg-cover bg-top bg-no-repeat"></div>
     </div>
@@ -60,20 +72,20 @@ const Home: FC<ServiceProps> = ({post ,  homeimage}) => {
             color: 'transparent',
           }}
           sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-          src="https://ai-tool.nextjstemplates.com/images/hero/icon-title.svg"
-          alt=""
+          src={ homebuttonstarurl}
+          alt={homebuttonstaralt}
         />
-        <span className="hero-subtitle-text">{post}</span>
+        <span className="hero-subtitle-text">{homebuttonstaralt}</span>
       </span>
 
       {/* Title */}
       <h1 className="mb-6 text-3xl font-extrabold text-white sm:text-5xl xl:text-heading-1">
-        Pixelcraft Media Solutions
+       {hometitle}
       </h1>
 
       {/* Description */}
       <p className="mx-auto mb-9 max-w-[500px] font-medium md:text-lg">
-        Fie ca ai nevoie de un website modern, o aplicatie mobila sau o strategie de promovare online, suntem partenerul tau de incredere in domeniul IT.
+       { homedescription}
       </p>
 
       {/* Button */}
@@ -81,7 +93,7 @@ const Home: FC<ServiceProps> = ({post ,  homeimage}) => {
         className="hero-button-gradient inline-flex rounded-lg px-7 py-3 font-medium text-white duration-300 ease-in hover:opacity-80"
         href="/ai-examples"
       >
-        Try AI Examples
+        {homebuttontext}
       </a>
     </div>
   </div>
@@ -105,8 +117,8 @@ const Home: FC<ServiceProps> = ({post ,  homeimage}) => {
       }}
       sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
      
-      src={ homeimage || 'https://ai-tool.nextjstemplates.com/images/hero/hero.svg'}
-      alt="hero"
+      src={ homeimage }
+      alt={homeimagetitle }
       decoding="async"
       data-nimg="fill"
     />

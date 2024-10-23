@@ -1,12 +1,22 @@
 const POST_GRAPHQL_FIELDS = `
- 
+ homedecoration{
+    url
+    title
+  }
+   
+   homebuttonstar{
+    url
+    title
+  }
+  hometitle
+  homedescription
   homeimage{
- 
     url
     title
   }
   metatitle
   metadescription
+  homebuttontext
   h1
   
   logo {
@@ -47,23 +57,40 @@ const POST_GRAPHQL_FIELDS = `
 `;
 
 // Функция для выполнения GraphQL-запроса с учётом локали
-async function fetchGraphQL(query: string, locale: string, preview = false): Promise<any> {
-  return fetch(
-    `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${
-          preview
-            ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
-            : process.env.CONTENTFUL_ACCESS_TOKEN
-        }`,
-      },
-      body: JSON.stringify({ query }),
-      next: { tags: ["posts"] },
+async function fetchGraphQL(query: string, locale: string, preview = true): Promise<any> {
+  try {
+    const response = await fetch(
+      `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${
+            preview
+              ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
+              : process.env.CONTENTFUL_ACCESS_TOKEN
+          }`,
+        },
+        body: JSON.stringify({ query }),
+        next: { tags: ["posts"] },
+      }
+    );
+    
+    const data = await response.json();
+
+    if (!response.ok || data.errors) {
+      console.error("GraphQL error:", data.errors || response.statusText);
+      throw new Error(
+        `Error fetching data: ${data.errors ? JSON.stringify(data.errors) : response.statusText}`
+      );
     }
-  ).then((response) => response.json());
+
+    return data;
+
+  } catch (error) {
+    console.error("Fetch error:", error);
+    throw new Error("Failed to fetch data from Contentful");
+  }
 }
 
 // Функция для извлечения поста из ответа
