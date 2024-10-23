@@ -9,6 +9,16 @@ const POST_GRAPHQL_FIELDS = `
       }
     }
   }
+    imggradient1{
+    url
+    }
+     imggradient2{
+    url
+    }
+     imggradient3{
+    url
+    }
+    
   homedecoration {
     url
     title

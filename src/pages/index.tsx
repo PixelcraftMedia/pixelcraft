@@ -22,6 +22,15 @@ interface Post {
       };      // Поле workimage (строка)
     }[]; // Массив объектов с worktext, workdescription и workimage
   };
+  imggradient1:{
+    url:string;
+  }
+  imggradient2:{
+    url:string;
+  }
+  imggradient3:{
+    url:string;
+  }
   homedescription:string;
   hometitle:string;
   homebuttonstar: {
@@ -109,6 +118,9 @@ const Index: FC<Props> = ({ posts }) => {
            post={post.slug}
             />
           <HeadAnimate
+          imggradient1={post.imggradient1.url}
+          imggradient2={post.imggradient2.url}
+          imggradient3={post.imggradient3.url}
            wortext={post.worktextCollection?.items}
               programaretitle={post.slug}
               programaredescription={post.slug}

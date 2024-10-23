@@ -1,6 +1,9 @@
 import React, { FC } from "react";
 import Image from "next/image";
 interface ServiceProps {
+  imggradient1:string;
+  imggradient2:string;
+  imggradient3:string;
   wortext: { worktext: string 
     workdescription: string;  // Поле workdescription (строка)
     workimage: {                // Поле workimage, которое является объектом
@@ -11,7 +14,7 @@ interface ServiceProps {
 	programaretitle: string;
 	programaredescription:string;
 }
-const HeadAnimate: FC<ServiceProps> = ({programaretitle, programaredescription, wortext}) => {
+const HeadAnimate: FC<ServiceProps> = ({programaretitle, programaredescription, wortext,imggradient1,imggradient2,imggradient3}) => {
 	return (
 		<>
 			<section className="relative z-20 scroll-mt-17 overflow-hidden pt-22.5 lg:pt-27.5 xl:pt-32.5">
@@ -36,7 +39,7 @@ const HeadAnimate: FC<ServiceProps> = ({programaretitle, programaredescription, 
     color: 'transparent',
   }}
   sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-  src="https://ai-tool.nextjstemplates.com/images/blur/blur-13.svg"
+  src={imggradient1}
   alt="Profesor Doctor Radulescu Luminita - Specialist Otorinolaringolog (ORL)"
               />
           <div className="absolute left-1/2 top-0 mx-auto aspect-square w-full max-w-[778px] -translate-x-1/2">
@@ -56,7 +59,7 @@ const HeadAnimate: FC<ServiceProps> = ({programaretitle, programaredescription, 
     color: 'transparent',
   }}
   sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-  src="https://ai-tool.nextjstemplates.com/images/blur/blur-14.svg"
+  src={imggradient2}
   alt="Profesor Doctor Radulescu Luminita - Specialist Otorinolaringolog (ORL)"
               />
           </div>
@@ -77,7 +80,7 @@ const HeadAnimate: FC<ServiceProps> = ({programaretitle, programaredescription, 
     color: 'transparent',
   }}
   sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-  src="https://ai-tool.nextjstemplates.com/images/blur/blur-15.svg"
+  src={imggradient3}
   alt="Profesor Doctor Radulescu Luminita - Specialist Otorinolaringolog (ORL)"
               />
           </div>
