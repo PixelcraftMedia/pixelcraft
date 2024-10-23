@@ -29,7 +29,7 @@ const Home: FC<ServiceProps> = ({post ,  homeimage,homeimagetitle,  homedescript
           className={`-u-z-10 hero-circle-gradient absolute -top-[${size === 1282 ? '128%' : '112%'}] left-1/2 -z-1 h-[${size}px] w-full max-w-[${size}px] -translate-x-1/2 rounded-full sm:top-[${size === 1282 ? '-107%' : '-93%'}] xl:top-[${size === 1282 ? '-73%' : '-62%'}]`}
         ></div>
       ))}
-      {/* Background and Blur */}
+      {/* Background and Bur */}
       <div className="-u-z-10 absolute left-1/2 top-0 aspect-[1204/394] w-full max-w-[1204px] -translate-x-1/2">
       <Image
     className="max-w-none"
