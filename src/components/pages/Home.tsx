@@ -33,8 +33,7 @@ const Home: FC<ServiceProps> = ({post ,  homeimage,homeimagetitle,  homedescript
       <div className="-u-z-10 absolute left-1/2 top-0 aspect-[1204/394] w-full max-w-[1204px] -translate-x-1/2">
         <Image
           className="max-w-none"
-          width={100}
-          height={100}
+          layout="fill"
           data-nimg="fill"
           style={{
             position: 'absolute',
@@ -66,8 +65,8 @@ const Home: FC<ServiceProps> = ({post ,  homeimage,homeimagetitle,  homedescript
         <Image
           className="max-w-none"
           priority={true}
-          width={16}
-          height={16}
+          width={10}
+          height={10}
           style={{
             color: 'transparent',
           }}
@@ -103,8 +102,7 @@ const Home: FC<ServiceProps> = ({post ,  homeimage,homeimagetitle,  homedescript
     <Image
       className="max-w-none"
       priority={true}
-      width={460}
-      height={780}
+    layout="fill"
       style={{
         position: 'absolute',
         height: '100%',
