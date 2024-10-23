@@ -5,7 +5,7 @@ interface ServiceProps {
     workdescription: string;  // Поле workdescription (строка)
     workimage: {                // Поле workimage, которое является объектом
       url: string;              // URL изображения
-      title: string;            // Название изображения
+      title: string;            // Название изображени
     };        // Поле workimage (строка)
   }[]; // Типизация для пропса
 	programaretitle: string;
