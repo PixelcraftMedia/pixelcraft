@@ -105,8 +105,7 @@ const Home: FC<ServiceProps> = ({post ,  homeimage,homeimagetitle,  homedescript
     layout="fill"
       style={{
         position: 'absolute',
-        height: '100%',
-        width: '100%',
+      
         left: 0,
         top: 0,
         right: 0,
