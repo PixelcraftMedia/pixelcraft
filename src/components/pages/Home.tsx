@@ -99,26 +99,17 @@ const Home: FC<ServiceProps> = ({post ,  homeimage,homeimagetitle,  homedescript
 
   {/* Hero Image */}
   <div className="relative mx-auto mt-17 aspect-[1170/411] w-full max-w-[1170px]" data-wow-delay="0.1s">
-    <Image
-      className="max-w-none"
-      priority={true}
+  <Image
+    className="max-w-none"
+    priority={true}
     layout="fill"
-      style={{
-        position: 'absolute',
-      
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
-        color: 'transparent',
-      }}
-      sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-     
-      src={ homeimage }
-      alt={homeimagetitle }
-      decoding="async"
-      data-nimg="fill"
-    />
+    src={homeimage} // Убедитесь, что это корректный путь к изображению
+    alt={homeimagetitle} // Описание изображения для SEO и доступности
+    decoding="async"
+    sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+    objectFit="cover" // Корректное масштабирование изображения
+  />
+
   </div>
 </section>
 
