@@ -107,7 +107,7 @@ const Home: FC<ServiceProps> = ({post ,  homeimage,homeimagetitle,  homedescript
     alt={homeimagetitle} // Описание изображения для SEO и доступности
     decoding="async"
     sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-    objectFit="cover" // Корректное масштабирование изображения
+    objectFit="cover" // Корректное масштабирование изображени
   />
 
   </div>
