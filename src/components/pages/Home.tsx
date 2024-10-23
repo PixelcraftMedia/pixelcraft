@@ -31,28 +31,16 @@ const Home: FC<ServiceProps> = ({post ,  homeimage,homeimagetitle,  homedescript
       ))}
       {/* Background and Blur */}
       <div className="-u-z-10 absolute left-1/2 top-0 aspect-[1204/394] w-full max-w-[1204px] -translate-x-1/2">
-        <Image
-       
-          className="max-w-none"
-          width={100} // Задана ширина изображения
-  height={493} // Задано соотношение сторон 1204:394
- 
-          style={{
-            position: 'absolute',
-            height: '100%',
-            width: '100%',
-            left: 0,
-            top: 0,
-            right: 0,
-            bottom: 0,
-            color: 'transparent',
-          }}
-          
-          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-          src={homedecorationurl}
-
-          alt={homedecorationsalt}
-        />
+      <Image
+    className="max-w-none"
+    layout="fill"
+    objectFit="cover"
+    width={1204}
+    height={394}
+    sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+    src={homedecorationurl}
+    alt={homedecorationsalt}
+  />
        
       </div>
       <div className="-u-z-10 absolute left-1/2 top-0 h-full w-full -translate-x-1/2 bg-[url(https://ai-tool.nextjstemplates.com/images/blur/blur-01.svg)] bg-cover bg-top bg-no-repeat"></div>
