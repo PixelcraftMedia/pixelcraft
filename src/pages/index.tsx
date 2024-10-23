@@ -97,12 +97,19 @@ const Index: FC<Props> = ({ posts }) => {
             homeimagetitle={post.homeimage.title}
            post={post.slug}
             />
-         
+          <HeadAnimate
+              programaretitle={post.slug}
+              programaredescription={post.slug}
+            />
              
            
          
         
-         
+          {/**  <Features
+              programaretitle={post.slug}
+              programaredescription={post.slug}
+            /> */}
+           
 
 <Link href={`/posts/${post.slug}`} passHref>  
            
