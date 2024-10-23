@@ -32,9 +32,10 @@ const Home: FC<ServiceProps> = ({post ,  homeimage,homeimagetitle,  homedescript
       {/* Background and Blur */}
       <div className="-u-z-10 absolute left-1/2 top-0 aspect-[1204/394] w-full max-w-[1204px] -translate-x-1/2">
         <Image
+        priority={true}
           className="max-w-none"
           width={1204} // Задана ширина изображения
-  height={394} // Задано соотношение сторон 1204:394
+  height={493} // Задано соотношение сторон 1204:394
   sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
           style={{
             position: 'absolute',
