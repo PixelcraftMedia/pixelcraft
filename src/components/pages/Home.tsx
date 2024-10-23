@@ -33,8 +33,8 @@ const Home: FC<ServiceProps> = ({post ,  homeimage,homeimagetitle,  homedescript
       <div className="-u-z-10 absolute left-1/2 top-0 aspect-[1204/394] w-full max-w-[1204px] -translate-x-1/2">
         <Image
           className="max-w-none"
-          layout="fill"
-          data-nimg="fill"
+          width={70}
+          height={40}
           style={{
             position: 'absolute',
             height: '100%',
@@ -65,8 +65,8 @@ const Home: FC<ServiceProps> = ({post ,  homeimage,homeimagetitle,  homedescript
         <Image
           className="max-w-none"
           priority={true}
-          width={10}
-          height={10}
+          width={15}
+          height={15}
           style={{
             color: 'transparent',
           }}
@@ -99,17 +99,27 @@ const Home: FC<ServiceProps> = ({post ,  homeimage,homeimagetitle,  homedescript
 
   {/* Hero Image */}
   <div className="relative mx-auto mt-17 aspect-[1170/411] w-full max-w-[1170px]" data-wow-delay="0.1s">
-  <Image
-    className="max-w-none"
-    priority={true}
+    <Image
+      className="max-w-none"
+      priority={true}
     layout="fill"
-    src={homeimage} // Убедитесь, что это корректный путь к изображению
-    alt={homeimagetitle} // Описание изображения для SEO и доступности
-    decoding="async"
-    sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-    objectFit="cover" // Корректное масштабирование изображени
-  />
-
+      style={{
+        position: 'absolute',
+        height: '100%',
+        width: '100%',
+        left: 0,
+        top: 0,
+        right: 0,
+        bottom: 0,
+        color: 'transparent',
+      }}
+      sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+     
+      src={ homeimage }
+      alt={homeimagetitle }
+      decoding="async"
+      data-nimg="fill"
+    />
   </div>
 </section>
 
