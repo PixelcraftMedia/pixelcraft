@@ -102,14 +102,7 @@ const Index: FC<Props> = ({ posts }) => {
            
          
         
-            <Features
-              programaretitle={post.slug}
-              programaredescription={post.slug}
-            />
-            <HeadAnimate
-              programaretitle={post.slug}
-              programaredescription={post.slug}
-            />
+         
 
 <Link href={`/posts/${post.slug}`} passHref>  
            
