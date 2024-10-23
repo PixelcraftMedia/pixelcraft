@@ -12,6 +12,16 @@ const HeadAnimate = dynamic(() => import('@/components/pages/HeadAnimate'));
 const Home = dynamic(() => import('@/components/pages/Home'));
 
 interface Post {
+  worktextCollection: {
+    items: {
+      worktext: string;         // Поле worktext (строка)
+      workdescription: string;  // Поле workdescription (строка)
+      workimage: {
+        url: string;
+        title: string;
+      };      // Поле workimage (строка)
+    }[]; // Массив объектов с worktext, workdescription и workimage
+  };
   homedescription:string;
   hometitle:string;
   homebuttonstar: {
@@ -86,6 +96,7 @@ const Index: FC<Props> = ({ posts }) => {
        
        
             <Home
+           
             homebuttontext={post.homebuttontext}
             homedecorationsalt={post.homedecoration.title}
             homedecorationurl={post.homedecoration.url}
@@ -97,21 +108,25 @@ const Index: FC<Props> = ({ posts }) => {
             homeimagetitle={post.homeimage.title}
            post={post.slug}
             />
-         
+          <HeadAnimate
+           wortext={post.worktextCollection?.items}
+              programaretitle={post.slug}
+              programaredescription={post.slug}
+            />
              
            
          
         
-          {/*  <Features
+          {/**  <Features
               programaretitle={post.slug}
               programaredescription={post.slug}
             /> */}
            
 
-<Link href={`/posts/${post.slug}`} passHref>  
+  {/**<Link href={`/posts/${post.slug}`} passHref>  
            
            <h2>{post.slug}dddd</h2>
-            </Link>
+            </Link> */}
 
 
           </Layout>

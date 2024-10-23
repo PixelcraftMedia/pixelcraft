@@ -1,16 +1,25 @@
 const POST_GRAPHQL_FIELDS = `
- homedecoration{
+  worktextCollection(limit: 6) {
+    items {
+      worktext
+      workdescription
+ workimage {
+        url   
+        title 
+      }
+    }
+  }
+  homedecoration {
     url
     title
   }
-   
-   homebuttonstar{
+  homebuttonstar {
     url
     title
   }
   hometitle
   homedescription
-  homeimage{
+  homeimage {
     url
     title
   }
@@ -18,7 +27,6 @@ const POST_GRAPHQL_FIELDS = `
   metadescription
   homebuttontext
   h1
-  
   logo {
     url
   }
@@ -27,33 +35,10 @@ const POST_GRAPHQL_FIELDS = `
   }
   slug
   title
- 
- 
   coverImage {
     url
   }
   date
-  author {
-    name
-    picture {
-      url
-    }
-  }
-  excerpt
-  content {
-    json
-    links {
-      assets {
-        block {
-          sys {
-            id
-          }
-          url
-          description
-        }
-      }
-    }
-  }
 `;
 
 // Функция для выполнения GraphQL-запроса с учётом локали
@@ -72,17 +57,14 @@ async function fetchGraphQL(query: string, locale: string, preview = true): Prom
           }`,
         },
         body: JSON.stringify({ query }),
-        next: { tags: ["posts"] },
       }
     );
-    
-    const data = await response.json();
 
+    // Проверка ответа
+    const data = await response.json();
     if (!response.ok || data.errors) {
       console.error("GraphQL error:", data.errors || response.statusText);
-      throw new Error(
-        `Error fetching data: ${data.errors ? JSON.stringify(data.errors) : response.statusText}`
-      );
+      throw new Error(`Error fetching data: ${data.errors ? JSON.stringify(data.errors) : response.statusText}`);
     }
 
     return data;

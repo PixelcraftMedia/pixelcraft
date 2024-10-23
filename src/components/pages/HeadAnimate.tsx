@@ -1,10 +1,17 @@
 import React, { FC } from "react";
 import Image from "next/image";
 interface ServiceProps {
+  wortext: { worktext: string 
+    workdescription: string;  // Поле workdescription (строка)
+    workimage: {                // Поле workimage, которое является объектом
+      url: string;              // URL изображения
+      title: string;            // Название изображения
+    };        // Поле workimage (строка)
+  }[]; // Типизация для пропса
 	programaretitle: string;
 	programaredescription:string;
 }
-const HeadAnimate: FC<ServiceProps> = ({programaretitle, programaredescription}) => {
+const HeadAnimate: FC<ServiceProps> = ({programaretitle, programaredescription, wortext}) => {
 	return (
 		<>
 			<section className="relative z-20 scroll-mt-17 overflow-hidden pt-22.5 lg:pt-27.5 xl:pt-32.5">
@@ -130,7 +137,9 @@ const HeadAnimate: FC<ServiceProps> = ({programaretitle, programaredescription})
       <div className="features-row-border absolute right-1/2 top-1/2 hidden h-[1px] w-1/2 -translate-y-1/2 rotate-90 lg:right-[8.3%] lg:block"></div>
 
       <div className="flex flex-wrap justify-center">
-        {/* Feature 1 */}
+      {wortext.map((item, index) => (
+          
+     
         <article className="w-full sm:w-1/2 lg:w-1/3">
           <div className="group relative overflow-hidden px-4 py-8 text-center sm:py-10 lg:px-8 xl:px-13 xl:py-15">
             <span className="features-bg absolute left-0 top-0 -z-1 h-full w-full opacity-0 group-hover:opacity-100"></span>
@@ -142,150 +151,27 @@ const HeadAnimate: FC<ServiceProps> = ({programaretitle, programaredescription})
                 height={32}
                 style={{ color: "transparent" }}
                 sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-                src="https://ai-tool.nextjstemplates.com/images/features/icon-01.svg"
+                src={ item.workimage.url}
                 alt="Dezvoltare Software"
               />
             </span>
             <h3 className="mb-4 text-lg font-semibold text-white">
-              Dezvoltare Software
+            {item.worktext}
             </h3>
             <p className="font-medium">
-              CRM/ERP/EMR: Implementarea sistemelor de automatizare a proceselor de afaceri optimizează eficiența și reduce erorile.
+            {item.workdescription}
             </p>
           </div>
         </article>
+))}
+        
 
-        {/* Feature 2 */}
-        <article className="w-full sm:w-1/2 lg:w-1/3">
-          <div className="group relative overflow-hidden px-4 py-8 text-center sm:py-10 lg:px-8 xl:px-13 xl:py-15">
-            <span className="features-bg absolute left-0 top-0 -z-1 h-full w-full opacity-0 group-hover:opacity-100"></span>
-            <span className="icon-border relative mx-auto mb-8 inline-flex h-20 w-full max-w-[80px] items-center justify-center rounded-full">
-              <Image
-                className="max-w-none"
-                priority={true}
-                width={32}
-                height={32}
-                loading="eager"
-                style={{ color: "transparent" }}
-                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-                src="https://ai-tool.nextjstemplates.com/images/features/icon-02.svg"
-                alt="Aplicatii Mobile"
-              />
+      
 
+       
+      
 
-            </span>
-            <h3 className="mb-4 text-lg font-semibold text-white">
-              Aplicatii Mobile
-            </h3>
-            <p className="font-medium">
-              Dezvoltare de aplicatii pentru iOS si Android, integrate cu CRM-uri si alte sisteme.
-            </p>
-          </div>
-        </article>
-
-        {/* Feature 3 */}
-        <article className="w-full sm:w-1/2 lg:w-1/3">
-          <div className="group relative overflow-hidden px-4 py-8 text-center sm:py-10 lg:px-8 xl:px-13 xl:py-15">
-            <span className="features-bg absolute left-0 top-0 -z-1 h-full w-full opacity-0 group-hover:opacity-100"></span>
-            <span className="icon-border relative mx-auto mb-8 inline-flex h-20 w-full max-w-[80px] items-center justify-center rounded-full">
-              <Image
-                className="max-w-none"
-                priority={true}
-                width={32}
-                height={32}
-                 loading="eager"
-                style={{ color: "transparent" }}
-                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-                src="https://ai-tool.nextjstemplates.com/images/features/icon-03.svg"
-                alt="Site-uri Web"
-              />
-            </span>
-            <h3 className="mb-4 text-lg font-semibold text-white">
-              Site-uri Web
-            </h3>
-            <p className="font-medium">
-              De la site-uri simple de prezentare la magazine online complexe și bloguri interactive.
-            </p>
-          </div>
-        </article>
-
-        {/* Feature 4 */}
-        <article className="w-full sm:w-1/2 lg:w-1/3">
-          <div className="group relative overflow-hidden px-4 py-8 text-center sm:py-10 lg:px-8 xl:px-13 xl:py-15">
-            <span className="features-bg absolute left-0 top-0 -z-1 h-full w-full opacity-0 group-hover:opacity-100 rotate-180"></span>
-            <span className="icon-border relative mx-auto mb-8 inline-flex h-20 w-full max-w-[80px] items-center justify-center rounded-full">
-              <Image
-                className="max-w-none"
-                priority={true}
-                width={32}
-                height={32}
-                 loading="eager"
-                style={{ color: "transparent" }}
-                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-                src="https://ai-tool.nextjstemplates.com/images/features/icon-04.svg"
-                alt="Design Creativ"
-              />
-            </span>
-            <h3 className="mb-4 text-lg font-semibold text-white">
-              Design Creativ
-            </h3>
-            <p className="font-medium">
-              Crearea de site-uri moderne și responsive, bannere și logo-uri pentru campanii.
-            </p>
-          </div>
-        </article>
-
-        {/* Feature 5 */}
-        <article className="w-full sm:w-1/2 lg:w-1/3">
-          <div className="group relative overflow-hidden px-4 py-8 text-center sm:py-10 lg:px-8 xl:px-13 xl:py-15">
-            <span className="features-bg absolute left-0 top-0 -z-1 h-full w-full opacity-0 group-hover:opacity-100 rotate-180"></span>
-            <span className="icon-border relative mx-auto mb-8 inline-flex h-20 w-full max-w-[80px] items-center justify-center rounded-full">
-              <Image
-                className="max-w-none"
-                priority={true}
-                width={32}
-                height={32}
-                 loading="eager"
-                style={{ color: "transparent" }}
-                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-                src="https://ai-tool.nextjstemplates.com/images/features/icon-05.svg"
-                alt="Promovare si Marketing"
-              />
-            </span>
-            <h3 className="mb-4 text-lg font-semibold text-white">
-              Promovare si Marketing
-            </h3>
-            <p className="font-medium">
-              SEO, SMM și publicitate targetată pentru creșterea vizibilității.
-            </p>
-          </div>
-        </article>
-
-        {/* Feature 6 */}
-        <article className="w-full sm:w-1/2 lg:w-1/3">
-          <div className="group relative overflow-hidden px-4 py-8 text-center sm:py-10 lg:px-8 xl:px-13 xl:py-15">
-            <span className="features-bg absolute left-0 top-0 -z-1 h-full w-full opacity-0 group-hover:opacity-100 rotate-180"></span>
-            <span className="icon-border relative mx-auto mb-8 inline-flex h-20 w-full max-w-[80px] items-center justify-center rounded-full">
-              <Image
-               loading="eager"
-                className="max-w-none"
-                priority={true}
-                width={32}
-                height={32}
-                style={{ color: "transparent" }}
-                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-                src="https://ai-tool.nextjstemplates.com/images/features/icon-06.svg"
-                alt="Securitate Cibernetica"
-              />
-            </span>
-            <h3 className="mb-4 text-lg font-semibold text-white">
-              Securitate Cibernetica
-            </h3>
-            <p className="font-medium">
-              Protectia datelor și audituri de securitate regulate.
-            </p>
-          </div>
-        </article>
+       
       </div>
 
       <div className="features-row-border h-[1px] w-full"></div>
