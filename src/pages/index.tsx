@@ -214,7 +214,7 @@ const Index: FC<Props> = ({ posts }) => {
                   id="message"
                   name="message"
                   placeholder="Type your message"
-                  rows="6"
+                
                   required
                   className="w-full rounded-lg border border-white/[0.12] bg-white/[0.05] px-6 py-5 outline-none focus:border-purple"
                 ></textarea>
