@@ -23,6 +23,9 @@ module.exports = {
          '27.5': '6.875rem', // Определяем кастомное значение для padding-bottom
          '17.5': '4.375rem', // Определяем кастомное значение для padding-top
       },
+      zIndex: {
+        '999': '999', // Кастомный класс z-999
+      },
       fontSize: {
         'heading-1': ['60px', { lineHeight: '72px' }],
         'heading-2': ['48px', { lineHeight: '58px' }],

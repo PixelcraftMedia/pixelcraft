@@ -30,19 +30,18 @@ const Home: FC<ServiceProps> = ({post ,  homeimage,homeimagetitle,  homedescript
         ></div>
       ))}
       {/* Background and Bur */}
-      <div className="-u-z-10 absolute left-1/2 top-0 aspect-[1204/394] w-full max-w-[1204px] -translate-x-1/2">
-      <Image
-    className="max-w-none"
-   
-    width={1204}
-    height={394}
-    sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-    src={homedecorationurl}
-    alt={homedecorationsalt}
-  />
-       
-      </div>
-      <div className="-u-z-10 absolute left-1/2 top-0 h-full w-full -translate-x-1/2 bg-[url(https://ai-tool.nextjstemplates.com/images/blur/blur-01.svg)] bg-cover bg-top bg-no-repeat"></div>
+      <div className="-z-10 absolute left-1/2 top-0 aspect-[1204/394] w-full max-w-[1204px] -translate-x-1/2">
+  <span
+    className="absolute left-1/2 top-[-80%] h-[656px] w-[656px] -translate-x-1/2 rounded-full bg-[#2c1158] opacity-22 blur-[137px]"
+  ></span>
+</div>
+
+<div className="-z-10 absolute left-1/2 top-0 h-full w-full -translate-x-1/2">
+  <span
+    className="absolute left-1/2 top-[-60%] h-[1282px] w-[1282px] -translate-x-1/2 rounded-full bg-[#8646F4] opacity-25 blur-[250px]"
+  ></span>
+</div>
+
     </div>
   </div>
 

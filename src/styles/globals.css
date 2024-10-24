@@ -358,3 +358,29 @@ body {
 .footer-divider-gradient {
     background: linear-gradient(270deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .12) 49.48%, hsla(0, 0%, 100%, 0));
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* form */
+.z-999 {
+    z-index: 999;
+}
+.pt-25 {
+    padding-top: 6.25rem;
+}
