@@ -7,9 +7,10 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 
-const Features = dynamic(() => import('@/components/pages/Features'));
-const HeadAnimate = dynamic(() => import('@/components/pages/HeadAnimate'));
-const Home = dynamic(() => import('@/components/pages/Home'));
+const Features = dynamic(() => import('@/components/pages/Features'), { ssr: false });
+const HeadAnimate = dynamic(() => import('@/components/pages/HeadAnimate'), { ssr: false });
+const Home = dynamic(() => import('@/components/pages/Home'), { ssr: false });
+
 
 interface Post {
   worktextCollection: {
@@ -103,28 +104,26 @@ const Index: FC<Props> = ({ posts }) => {
         filteredPosts.map((post: Post) => (
           <Layout key={post.slug} metatitle={post.metatitle} metadescription={post.metadescription}>
        
-       
-            <Home
-           
-            homebuttontext={post.homebuttontext}
-            homedecorationsalt={post.homedecoration.title}
-            homedecorationurl={post.homedecoration.url}
-            homebuttonstaralt={post.homebuttonstar.title}
-            homebuttonstarurl={post.homebuttonstar.url}
-            hometitle={post.hometitle}
-            homedescription={post.homedescription}
-            homeimage={post.homeimage.url}
-            homeimagetitle={post.homeimage.title}
-           post={post.slug}
-            />
-          <HeadAnimate
-          imggradient1={post.imggradient1.url}
-          imggradient2={post.imggradient2.url}
-          imggradient3={post.imggradient3.url}
-           wortext={post.worktextCollection?.items}
-              programaretitle={post.slug}
-              programaredescription={post.slug}
-            />
+       <Home
+  homebuttontext={post.homebuttontext || ''}
+  homedecorationsalt={post.homedecoration?.title || ''}
+  homedecorationurl={post.homedecoration?.url || ''}
+  homebuttonstaralt={post.homebuttonstar?.title || ''}
+  homebuttonstarurl={post.homebuttonstar?.url || ''}
+  hometitle={post.hometitle || ''}
+  homedescription={post.homedescription || ''}
+  homeimage={post.homeimage?.url || ''}
+  homeimagetitle={post.homeimage?.title || ''}
+  post={post.slug}
+/>
+         <HeadAnimate
+  imggradient1={post.imggradient1?.url || ''}
+  imggradient2={post.imggradient2?.url || ''}
+  imggradient3={post.imggradient3?.url || ''}
+  wortext={post.worktextCollection?.items || []}
+  programaretitle={post.slug}
+  programaredescription={post.slug}
+/>
              
            
              <section id="support" className="scroll-mt-17">
